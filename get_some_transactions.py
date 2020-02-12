@@ -39,5 +39,5 @@ def get_some_transactions(access_token: str, start_date: str, end_date: str) -> 
 
 some_transactions = get_some_transactions(os.getenv('CHASE_ACCESS_TOKEN'), '1972-01-01', '2017-05-26')
 print(f"there are {len(some_transactions)} transactions")
-pprint([transaction for transaction in some_transactions if transaction['amount'] < 0])
+print([transaction for transaction in some_transactions if transaction['amount'] < 0])
 
